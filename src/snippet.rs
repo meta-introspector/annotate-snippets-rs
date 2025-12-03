@@ -1,7 +1,7 @@
 //! Structures used as an input for the library.
 
-use crate::renderer::source_map::{as_substr, TrimmedPatch};
 use crate::Level;
+use crate::renderer::source_map::{TrimmedPatch, as_substr};
 use std::borrow::Cow;
 use std::ops::Range;
 

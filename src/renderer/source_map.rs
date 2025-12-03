@@ -1,4 +1,4 @@
-use crate::renderer::{char_width, num_overlap, LineAnnotation, LineAnnotationType};
+use crate::renderer::{LineAnnotation, LineAnnotationType, char_width, num_overlap};
 use crate::{Annotation, AnnotationKind, Patch};
 use std::borrow::Cow;
 use std::cmp::{max, min};

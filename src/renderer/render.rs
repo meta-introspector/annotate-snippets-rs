@@ -1,16 +1,16 @@
 // Most of this file is adapted from https://github.com/rust-lang/rust/blob/160905b6253f42967ed4aef4b98002944c7df24c/compiler/rustc_errors/src/emitter.rs
 
 use std::borrow::Cow;
-use std::cmp::{max, min, Ordering, Reverse};
+use std::cmp::{Ordering, Reverse, max, min};
 use std::collections::HashMap;
 use std::fmt;
 
 use anstyle::Style;
 
-use super::margin::Margin;
-use super::stylesheet::Stylesheet;
 use super::DecorStyle;
 use super::Renderer;
+use super::margin::Margin;
+use super::stylesheet::Stylesheet;
 use crate::level::{Level, LevelInner};
 use crate::renderer::source_map::{
     AnnotatedLineInfo, LineInfo, Loc, SourceMap, SplicedLines, SubstitutionHighlight, TrimmedPatch,
@@ -2742,7 +2742,7 @@ fn newline_count(body: &str) -> usize {
 
 #[cfg(test)]
 mod test {
-    use super::{newline_count, OUTPUT_REPLACEMENTS};
+    use super::{OUTPUT_REPLACEMENTS, newline_count};
     use snapbox::IntoData;
 
     fn format_replacements(replacements: Vec<(char, &str)>) -> String {
